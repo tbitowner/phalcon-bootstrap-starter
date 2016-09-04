@@ -2,6 +2,11 @@
 
 use Phalcon\Mvc\Router\Group as RouterGroup;
 
+/**
+ * The guest router group should handle public facing routes, this may include
+ * Registering, signing in, etc
+ *
+ */
 class GuestRouterGroup extends RouterGroup
 {
     public function initialize()
@@ -9,37 +14,36 @@ class GuestRouterGroup extends RouterGroup
         // Default paths
         $this->setPaths(
             array(
-                'module'    => 'blog',
-                'namespace' => 'Blog\Controllers'
+                'namespace'  => 'App\Http\Controllers',
+                'controller' => 'guest'
             )
         );
 
-        // All the routes start with /blog
-        $this->setPrefix('/blog');
+        // All the routes start with /guest
+        $this->setPrefix('/guest');
 
-        // Add a route to the group
         $this->add(
-            '/save',
+            '/',
             array(
-                'action' => 'save'
+                'namespace'  => 'App\Http\Controllers',
+                'action' => 'index'
             )
         );
 
-        // Add another route to the group
         $this->add(
-            '/edit/{id}',
+            '/login',
             array(
-                'action' => 'edit'
+                'namespace'  => 'App\Http\Controllers',
+                'action' => 'signin'
             )
         );
 
-        // This route maps to a controller different than the default
         $this->add(
-            '/blog',
+            '/register',
             array(
-                'controller' => 'blog',
-                'action'     => 'index'
+                'namespace'  => 'App\Http\Controllers',
+                'action' => 'register'
             )
-        );
+        )->via(array("POST"));
     }
 }

@@ -30,6 +30,18 @@ $di->set('db', function () use ($config) {
     );
 });
 
+/**
+ * Add routing capabilities
+ */
+$di->set(
+    'router',
+    function () {
+        require __DIR__.'/routes.php';
+
+        return $router;
+    }, true
+);
+
 // Register Volt as template engine
 $di->set('view', function () {
 

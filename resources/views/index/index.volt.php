@@ -1,7 +1,16 @@
-{% extends "layouts/public.volt" %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    <link href="/assets/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel='stylesheet' type='text/css'>
+    <link href="/assets/css/signin.css" rel='stylesheet' type='text/css'>
+  </head>
 
-
-        {% block topbar %}
+  <body>
+  
         
         <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -12,7 +21,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Project name</a>
+        <a class="navbar-brand" href="#">Phalcon Bootstrap Starter</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -35,9 +44,27 @@
     </div>
   </nav>
                 
-        {% endblock %}
+        
+
+  
+        <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, Phalcon developers!</h1>
+        <p>This is a starter kit for Phalcon 3 and Bootstrap 3. This can be used as a starting point for developing applications using Phalcon and Bootstrap, saving Phalcon configuration time.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+      </div>
+    </div>
+        
 
 
-        {% block content %}
-             content
-        {% endblock %}
+        
+             index content
+        
+
+        
+
+        
+
+    
+  </body>
+</html>

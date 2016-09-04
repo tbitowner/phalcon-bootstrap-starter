@@ -1,4 +1,4 @@
-<?php
+<?php namespace App\Http\Controllers;
 
 use Phalcon\Mvc\Controller;
 
@@ -7,6 +7,6 @@ class IndexController extends Controller
 
     public function indexAction()
     {
-        echo "<h1>Hello!</h1>";
+        return "<h1>Hello!</h1>";
     }
 }
