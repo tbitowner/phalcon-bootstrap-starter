@@ -20,17 +20,19 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
         <div class="row">
-        <div class="col-sm-6">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me"> Remember me
-              </label>
+        
+            <div class="col-sm-6">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                </div>
             </div>
-        </div>
 
-        <div class="col-sm-6">
-            <a href="#" class="btn btn-link">Need an account?</a>
-        </div>
+            <div class="col-sm-6">
+                <a href="{{url('guest/index')}}" class="btn btn-link">Need an account?</a>
+            </div>
+
         </div>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>

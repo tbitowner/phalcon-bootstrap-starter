@@ -12,6 +12,7 @@ body {
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
+  margin-top: 7px;
 }
 .form-signin .checkbox {
   font-weight: normal;
@@ -49,6 +50,7 @@ body {
 .form-register .form-register-heading,
 .form-register .checkbox {
   margin-bottom: 10px;
+  margin-top: 7px;
 }
 .form-register .checkbox {
   font-weight: normal;
@@ -70,8 +72,13 @@ body {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-register input[type="password"] {
+.form-register > #inputPassword {
   margin-bottom: -1px;
+  border-radius: 0;
+}
+
+.form-register > #confirmInputPassword {
+  margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

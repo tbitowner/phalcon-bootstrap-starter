@@ -35,12 +35,21 @@
         
         <label for="confirmInputPassword" class="sr-only">Confirm Password</label>
         <input type="password" id="confirmInputPassword" class="form-control" placeholder="Confirm Password" required="">
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
+        
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+          </div>
+          
+          <div class="col-sm-6">
+              <a href="<?php echo $this->url->get('guest/login'); ?>" class="btn btn-link">Have an account?</a>
+          </div>
         </div>
+
         <button class="btn btn-lg btn-primary btn-block" type="submit">Go!</button>
       </form>
 

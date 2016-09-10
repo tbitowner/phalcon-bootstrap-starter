@@ -5,9 +5,17 @@ use Phalcon\DI\FactoryDefault;
 use Phalcon\Mvc\View;
 use Phalcon\Session\Adapter\Files as Session;
 use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
+use Phalcon\Mvc\Url;
 
 // Create a DI
 $di = new FactoryDefault();
+
+// Set the base url
+$di->set('url', function () {
+    $url = new Url();
+    $url->setBaseUri('/');
+    return $url;
+});
 
 // Start the session the first time a component requests the session service
 $di->set('session', function () {

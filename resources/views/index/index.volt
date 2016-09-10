@@ -42,12 +42,12 @@
       <div class="container">
         <h1>Hello, Phalcon developers!</h1>
         <p>This is a starter kit for Phalcon 3 and Bootstrap 3. This can be used as a starting point for developing applications using Phalcon and Bootstrap, saving Phalcon configuration time.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+        <p><a class="btn btn-primary btn-lg" href="{{url('guest/login')}}" role="button">Learn more »</a></p>
       </div>
     </div>
         {% endblock %}
 
 
         {% block content %}
-             index content
+             
         {% endblock %}
